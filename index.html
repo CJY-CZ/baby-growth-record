@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈俊宇的成长小天地 🍼</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航菜单 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🚗 车车的成长小屋</div>
+            <ul class="nav-links">
+                <li><a href="#home">🏠 首页</a></li>
+                <li><a href="#profile">👶 宝宝档案</a></li>
+                <li><a href="#timeline">📅 成长时间线</a></li>
+                <li><a href="#albums">📸 相册分类</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+
+    <!-- 首页 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="baby-avatar">👶</div>
+            <h1>陈俊宇的成长小天地</h1>
+            <p class="subtitle">记录每一个闪闪发光的瞬间 ✨</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="days-old">0</span>
+                    <span class="stat-label">来到世界的天数</span>
+                </div>
+            </div>
+        </div>
+        <div class="floating-hearts">
+            <span>💕</span><span>🌟</span><span>🎈</span><span>🧸</span>
+        </div>
+    </section>
+
+    <!-- 宝宝档案 -->
+    <section id="profile" class="profile-section">
+        <h2 class="section-title">👶 宝宝档案</h2>
+        <div class="profile-card">
+            <div class="profile-avatar">🚗</div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <span class="label">小名：</span>
+                    <span class="value">车车 🚗</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">大名：</span>
+                    <span class="value">陈俊宇</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">生日：</span>
+                    <span class="value" id="birthday">2024-01-01</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">星座：</span>
+                    <span class="value" id="zodiac">摩羯座</span>
+                </div>
+                <div class="info-item hobbies">
+                    <span class="label">小爱好：</span>
+                    <span class="value" id="hobbies">玩小汽车、听故事、吃草莓 🍓</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成长时间线 -->
+    <section id="timeline" class="timeline-section">
+        <h2 class="section-title">📅 成长时间线</h2>
+        <div class="timeline" id="timeline-container">
+            <!-- 时间线内容由JavaScript动态生成 -->
+        </div>
+    </section>
+
+    <!-- 相册分类 -->
+    <section id="albums" class="albums-section">
+        <h2 class="section-title">📸 相册分类</h2>
+        <div class="albums-grid" id="albums-container">
+            <!-- 相册内容由JavaScript动态生成 -->
+        </div>
+    </section>
+
+    <!-- 相册详情弹窗 -->
+    <div id="album-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">相册名称</h3>
+                <button class="music-btn" id="music-btn" onclick="toggleMusic()">🎵 播放音乐</button>
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+            </div>
+            <audio id="album-audio" loop></audio>
+            <div class="modal-body" id="modal-body">
+                <!-- 照片展示 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 图片查看器 -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>🍼 车车的成长记录 | 用爱记录每一天 💕</p>
+        <p class="update-hint">最后更新：<span id="last-update"></span></p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
